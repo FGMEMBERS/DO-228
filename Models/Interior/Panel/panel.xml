@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.459 </y-m>
+      <z-m>  0.042 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.459 </y-m>
+      <z-m> 0.042 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.349 </y-m>
+      <z-m>  0.051 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.568 </y-m>
+      <z-m> 0.051 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.568 </y-m>
+      <z-m>  0.038 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.349 </y-m>
+      <z-m> 0.038 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ADF -->
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.568 </y-m>
+      <z-m> -0.078 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.349 </y-m>
+      <z-m> -0.078 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- HSI -->
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/HSI/hsi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.458 </y-m>
+      <z-m> -0.078 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/HSI/hsi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.458 </y-m>
+      <z-m> -0.078 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- MAG-COMPASS -->
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/mag-compass/mag-compass.xml</path>
+    <offsets>
+      <x-m> 0.002 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.250 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- LIGHT SWITCH -->
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/Switch/land-lights.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.640 </y-m>
+      <z-m>  0.130 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/Switch/land-lights.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.574 </y-m>
+      <z-m> 0.130 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/Switch/instr-lights.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.607 </y-m>
+      <z-m>  0.130 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/Switch/instr-lights.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.607 </y-m>
+      <z-m> 0.130 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/Switch/batt-lights.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.574 </y-m>
+      <z-m>  0.130 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/DO-228/Models/Interior/Panel/Instruments/Switch/batt-lights.xml</path>
+    <offsets>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.640 </y-m>
+      <z-m> 0.130 </z-m>
+    </offsets>
+  </model>
+  
+</PropertyList>
