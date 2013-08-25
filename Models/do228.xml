@@ -58,8 +58,14 @@
     <object-name>echappes</object-name>
     <object-name>heliceG</object-name>
     <object-name>heliceD</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
     <object-name>roueA</object-name>
+    <object-name>axeGH</object-name>
+    <object-name>axeGB</object-name>
     <object-name>roueG</object-name>
+    <object-name>axeDH</object-name>
+    <object-name>axeDB</object-name>
     <object-name>roueD</object-name>
     
     <!-- Objets transparents -->
@@ -105,8 +111,14 @@
     <object-name>echappes</object-name>
     <object-name>heliceG</object-name>
     <object-name>heliceD</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
     <object-name>roueA</object-name>
+    <object-name>axeGH</object-name>
+    <object-name>axeGB</object-name>
     <object-name>roueG</object-name>
+    <object-name>axeDH</object-name>
+    <object-name>axeDB</object-name>
     <object-name>roueD</object-name>
 
     <property-base>sim/model/livery</property-base>
@@ -396,7 +408,7 @@
       </greater-than>
     </condition>
     <property>/engines/engine[0]/rpm</property>
-    <factor> 1 </factor>
+    <factor> 0.8 </factor>
     <center>
       <x-m> -3.06092 </x-m>
       <y-m> -2.52204 </y-m>
@@ -468,7 +480,7 @@
       </greater-than>
     </condition>
     <property>/engines/engine[1]/rpm</property>
-    <factor> 1 </factor>
+    <factor> 0.8 </factor>
     <center>
       <x-m> -3.06092 </x-m>
       <y-m>  2.52204 </y-m>
@@ -579,8 +591,15 @@
 
   <!-- Rentré des roues -->
   <animation>
-    <type>rotate</type>
+    <name>TrainAvant</name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
     <object-name>roueA</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainAvant</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 110 </dep></entry>
@@ -599,8 +618,15 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>TrainGauche</name>
+    <object-name>axeGH</object-name>
+    <object-name>axeGB</object-name>
     <object-name>roueG</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 95 </dep></entry>
@@ -619,8 +645,15 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <name>TrainDroit</name>
+    <object-name>axeDH</object-name>
+    <object-name>axeDB</object-name>
     <object-name>roueD</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainDroit</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> -95 </dep></entry>
