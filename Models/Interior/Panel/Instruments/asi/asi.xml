@@ -47,9 +47,10 @@
       <property>/controls/lighting/instrument-lights</property>
     </condition>
     <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <red>   1 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+	  <factor-prop>/controls/lighting/instruments-norm</factor-prop>
     </emission>
   </animation>    
 
@@ -60,12 +61,9 @@
     <property>velocities/airspeed-kt</property>
     <interpolation>
       <entry><ind>   0 </ind><dep>   0.0 </dep></entry>
-      <entry><ind> 100 </ind><dep>  45.5 </dep></entry>
-      <entry><ind> 200 </ind><dep> 122.0 </dep></entry>
-      <entry><ind> 300 </ind><dep> 187.5 </dep></entry>
-      <entry><ind> 400 </ind><dep> 247.0 </dep></entry>
-      <entry><ind> 500 </ind><dep> 273.0 </dep></entry>
-      <entry><ind> 800 </ind><dep> 350.0 </dep></entry>
+      <entry><ind> 100 </ind><dep>  89.5 </dep></entry>
+      <entry><ind> 250 </ind><dep> 270.0 </dep></entry>
+      <entry><ind> 300 </ind><dep> 340.5 </dep></entry>
     </interpolation>   
     <axis>
       <x> -1 </x>

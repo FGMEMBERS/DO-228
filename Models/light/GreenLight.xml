@@ -4,6 +4,11 @@
 
   <path>GreenLight.ac</path>
 
+        <animation>
+			<object-name>Light</object-name>
+			<nopreview/>
+		</animation>
+  
   <animation>
     <type>noshadow</type>
     <object-name>Light</object-name>
@@ -35,7 +40,7 @@
       <red>   1 </red>
       <green> 1 </green>
       <blue>  1 </blue>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>/systems/electrical/volts</factor-prop>
     </emission>
   </animation>
 
@@ -43,17 +48,44 @@
     <type>dist-scale</type>
     <object-name>Light</object-name>
     <interpolation>
-      <entry><ind>    0 </ind><dep> 0.25 </dep></entry>
-      <entry><ind>   20 </ind><dep> 0.50 </dep></entry>
-      <entry><ind> 1500 </ind><dep> 5.00 </dep></entry>
+      <entry><ind>    0 </ind><dep> 0.19 </dep></entry>
+      <entry><ind>   20 </ind><dep> 0.21 </dep></entry>
+      <entry><ind> 15000 </ind><dep> 5.00 </dep></entry>
     </interpolation>
   </animation>
 
+    <animation>
+  <type>flash</type>
+  <object-name>Light</object-name>
+  <center>
+      <x-m>  0 </x-m>
+      <y-m> 0.01 </y-m>
+      <z-m>  0 </z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>0.2</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1.7</max>
+</animation>
+  
   <animation>
     <type>select</type>
     <object-name>Light</object-name>
     <condition>
-      <property>controls/lighting/nav-lights</property>
+      <and>
+        <property>controls/lighting/nav-lights</property>
+        <or>
+          <property>controls/electric/battery-switch</property>
+          <property>engines/engine/running</property>
+        </or>
+      </and>
     </condition>
   </animation>
 

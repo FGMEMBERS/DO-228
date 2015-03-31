@@ -34,6 +34,22 @@
     <object-name>vitre</object-name>
   </effect>
 
+  
+  <animation>
+        <type>material</type>
+        <object-name>barre</object-name>
+        <object-name>ring</object-name>
+    <condition>
+      <not><property>/controls/lighting/instrument-lights</property></not>
+    </condition>		
+        <emission>
+            <red>0.18</red>
+            <green>0.18</green>
+            <blue>0.18</blue>
+        </emission>
+    </animation>
+  
+  
   <animation>
     <type>material</type>
     <object-name>barre</object-name>
@@ -42,9 +58,10 @@
       <property>/controls/lighting/instrument-lights</property>
     </condition>
     <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <red>   1 </red>
+      <green> 0.85 </green>
+      <blue>  0.85 </blue>
+	  <factor-prop>/controls/lighting/instruments-norm</factor-prop>
     </emission>
   </animation>    
 

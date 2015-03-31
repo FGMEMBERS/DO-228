@@ -4,12 +4,10 @@
 
   <path>shadow.ac</path>
 
-  <animation>
-    <!-- Objets opaques -->
-
-    <!-- Objets transparents -->
-    <object-name>shadow</object-name>
-  </animation>
+		<animation>
+			<object-name>shadow</object-name>
+			<nopreview/>
+		</animation>
 
   <animation>
     <type>noshadow</type>
@@ -19,15 +17,25 @@
   <animation>
     <type>select</type>
     <object-name>shadow</object-name>
-    <condition>
-      <and>
-        <not><property>sim/freeze/replay-state</property></not>
-        <not><property>sim/rendering/shadows/enabled</property></not>
-      </and>
-    </condition>
+	<condition>
+	       <property>sim/rendering/shadows/enabled</property>
+           <not><property>sim/freeze/replay-state</property></not>
+		   <less-than>		
+               <property>/sim/time/sun-angle-rad</property>
+               <value>1.52</value>
+            </less-than>
+            <less-than>
+			   <property>position/gear-agl-m</property>
+			   <value>520</value>
+			</less-than>
+			<not-equals>
+				<property>sim/crashed</property>
+				<value>true</value>
+			</not-equals>   
+     </condition>
   </animation>
 
-  <!-- Une ombre pour OSG en attendant mieux ;) basé sur l'ombre du DC 3-->
+
   <!-- pitch -->
   <animation>
     <type>rotate</type>
@@ -59,7 +67,7 @@
    <type>translate</type>
    <object-name>shadow</object-name>
    <property>sim/multiplay/generic/float[2]</property>
-   <factor> -1 </factor>
+   <factor> -0.7 </factor>
    <axis>
      <x> 0 </x>
      <y> 0 </y>

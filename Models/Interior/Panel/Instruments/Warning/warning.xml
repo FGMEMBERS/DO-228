@@ -12,9 +12,6 @@
   <animation>
     <type>material</type>
     <object-name>on</object-name>
-    <condition>
-      <property>/controls/lighting/instrument-lights</property>
-    </condition>
     <emission>
       <red>   0.50 </red>
       <green> 0.25 </green>

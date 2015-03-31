@@ -54,6 +54,7 @@
     <interpolation>
       <entry><ind>     0 </ind><dep>   0 </dep></entry>
       <entry><ind> 21370 </ind><dep> 180 </dep></entry>
+	  <entry><ind> 2700 </ind><dep> 280 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>

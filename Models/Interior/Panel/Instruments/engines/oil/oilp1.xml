@@ -54,7 +54,7 @@
     <object-name>Oil.needle1</object-name>
     <property>engines/engine[0]/n2</property>
     <interpolation>
-      <entry><ind>   0 </ind><dep>  0 </dep></entry>
+      <entry><ind>   0 </ind><dep> 82 </dep></entry>
       <entry><ind> 110 </ind><dep> 90 </dep></entry>
     </interpolation>
     <axis>
@@ -69,8 +69,8 @@
     <object-name>Oil.needle2</object-name>
     <property>engines/engine[0]/torque-ftlb</property>
     <interpolation>
-      <entry><ind>    0 </ind><dep>  0 </dep></entry>
-      <entry><ind> 5000 </ind><dep> 70 </dep></entry>
+      <entry><ind>    0 </ind><dep> 42 </dep></entry>
+      <entry><ind> 5000 </ind><dep> 68 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>

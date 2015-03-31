@@ -71,9 +71,10 @@
       <property>/controls/lighting/instrument-lights</property>
     </condition>
     <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <red>   1 </red>
+      <green> 0.75 </green>
+      <blue>  0.75 </blue>
+	  <factor-prop>/controls/lighting/instruments-norm</factor-prop>
     </emission>
   </animation>    
 
