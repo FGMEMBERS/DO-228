@@ -19,22 +19,8 @@
     
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
-    <object-name>intvitrecargoA</object-name>
-    <object-name>intvitrecargoB</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>intvitres</object-name>
-    <object-name>intvitrecargoA</object-name>
-    <object-name>intvitrecargoB</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intvitres</object-name>
+    <object-name>intvitrecrew</object-name>
+    <object-name>intvitrepassager</object-name>
     <object-name>intvitrecargoA</object-name>
     <object-name>intvitrecargoB</object-name>
   </animation>
@@ -42,14 +28,39 @@
   <!-- working for Rembrandt -->
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
     <object-name>intvitres</object-name>
+    <object-name>intvitrecrew</object-name>
+    <object-name>intvitrepassager</object-name>
     <object-name>intvitrecargoA</object-name>
     <object-name>intvitrecargoB</object-name>
   </effect>
 
+  <animation>
+    <type>select</type>
+    <object-name>intvitres</object-name>
+    <object-name>intvitrecrew</object-name>
+    <object-name>intvitrepassager</object-name>
+    <object-name>intvitrecargoA</object-name>
+    <object-name>intvitrecargoB</object-name>
+    <condition>
+      <less-than>
+        <property>/environment/rain-norm</property>
+        <value>0.1</value>
+      </less-than>
+    </condition>
+  </animation>
+  
+  <!-- Raind Drops Effect -->
+  <model>
+    <path>Aircraft/DO-228/Models/Effects/RainDrops/rainglass.xml</path>
+    <condition>
+      <greater-than>
+        <property>/environment/rain-norm</property>
+        <value>0.1</value>
+      </greater-than>
+    </condition>
+  </model>
+  
   <!-- Pilote -->
   <model>
     <path>Aircraft/DO-228/Models/Pilot/pilot.xml</path>
@@ -74,6 +85,7 @@
   <animation>
     <type>pick</type>
     <object-name>intportecrew</object-name>
+    <object-name>intvitrecrew</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
@@ -88,6 +100,7 @@
   <animation>
     <type>rotate</type>
     <object-name>intportecrew</object-name>
+    <object-name>intvitrecrew</object-name>
     <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -80 </factor>
     <center>
@@ -105,6 +118,7 @@
   <animation>
     <type>pick</type>
     <object-name>intportepassager</object-name>
+    <object-name>intvitrepassager</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
@@ -119,6 +133,7 @@
   <animation>
     <type>rotate</type>
     <object-name>intportepassager</object-name>
+    <object-name>intvitrepassager</object-name>
     <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 80 </factor>
     <center>

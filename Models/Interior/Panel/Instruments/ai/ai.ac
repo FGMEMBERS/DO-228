@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 50 trans 0.85
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
 kids 17
 OBJECT poly
@@ -10,7 +10,7 @@ data 2
 AI
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 60.000002
+crease 180.000005
 numvert 158
 0.007927 -0.0486 0.012419
 0.007927 -0.049564 0.004907
@@ -1156,7 +1156,7 @@ data 7
 AI.face
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 45
 0.002173 0.024118 -0.024118
 0.002173 0.019564 -0.02794
@@ -1438,7 +1438,7 @@ data 8
 AI.face2
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 32
 0.003207 0.017084 0.034577
 0.003207 -0.017084 0.034577
@@ -1582,7 +1582,7 @@ data 11
 AI.gsneedle
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 8
 0.00343 0.002212 -0.046369
 0.00343 -0.002212 -0.046369
@@ -1636,7 +1636,7 @@ data 7
 AI.knob
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 60.000002
+crease 180.000005
 numvert 33
 0.008575 -0.043161 0.041605
 0.008575 -0.045168 0.040264
@@ -1888,7 +1888,7 @@ data 7
 AI.ring
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 156
 0.001204 0.033915 -0.000468
 0.001204 0.030195 -0.001726
@@ -2867,7 +2867,7 @@ data 11
 AI.slipball
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 17
 0.008295 -0.052977 -0.001298
 0.008295 -0.053572 -0.001695
@@ -2991,7 +2991,7 @@ data 6
 AIball
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 60.000002
+crease 180.000005
 numvert 646
 -0.000395 0.000092 -0.032003
 0.002244 0.000092 -0.028561
@@ -7904,7 +7904,7 @@ data 10
 Circle.016
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 70
 0.008793 -0.055989 -0.012526
 0.008793 -0.055989 0.012524
@@ -8237,7 +8237,7 @@ data 10
 LOC.needle
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 16
 0.004298 -0.033636 -0.001949
 0.004298 -0.034395 -0.000998
@@ -8341,7 +8341,7 @@ data 9
 Plane.109
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 88
 0.002526 0.025523 0.027775
 0.002527 0.024216 0.02441
@@ -8825,7 +8825,7 @@ data 9
 Plane.111
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 60.000002
+crease 180.000005
 numvert 30
 0.012006 -0.000252 -0.000248
 0.008142 -0.003802 -0.020023
@@ -9025,7 +9025,7 @@ data 10
 aoa.needle
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 64
 0.00343 0.016527 0.040054
 0.00343 0.01608 0.039756
@@ -9436,7 +9436,7 @@ data 7
 gs.flag
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 8
 0.003657 0.016363 -0.048164
 0.003657 -0.00076 -0.041933
@@ -9490,7 +9490,7 @@ data 8
 loc.flag
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 8
 0.004452 -0.044314 -0.019104
 0.004452 -0.038081 -0.00198
@@ -9544,7 +9544,7 @@ data 11
 turn.needle
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 12
 0.004792 -0.042069 -0.001033
 0.004792 -0.044365 -0.001033

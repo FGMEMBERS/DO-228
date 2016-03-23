@@ -13,7 +13,6 @@
           <script>aircraft.livery.dialog.toggle()</script>
         </binding>
       </item>
-<!--      
       <item>
         <label>Immatriculation</label>
         <binding>
@@ -21,7 +20,6 @@
           <script>do228.immat_dialog.toggle()</script>
         </binding>
       </item>
--->
     </menu>
   </default>
 
