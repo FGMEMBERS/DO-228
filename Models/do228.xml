@@ -4,6 +4,11 @@
 
   <path>do228.ac</path>
 
+  <!-- MP sound call -->
+  <sound>
+    <path>Aircraft/DO-228/Sounds/mp-sound.xml</path>
+  </sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/DO-228/Models/Liveries", 10);
@@ -129,18 +134,10 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
@@ -166,68 +163,19 @@
     <object-name>gons</object-name>
     <object-name>supports</object-name>
   </effect>
-
-  <effect>
-    <inherits-from>Effects/model-combined-deferred</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
-    <object-name>fuselage</object-name>
-    <object-name>ailes</object-name>
-    <object-name>aileronG</object-name>
-    <object-name>aileronD</object-name>
-    <object-name>voletG</object-name>
-    <object-name>voletD</object-name>
-    <object-name>ailes2</object-name>
-    <object-name>profondeur</object-name>
-    <object-name>direction</object-name>
-    <object-name>antenne</object-name>
-    <object-name>porteG</object-name>
-    <object-name>porteD</object-name>
-    <object-name>portecargoA</object-name>
-    <object-name>portecargoB</object-name>
-    <object-name>portesoute</object-name>
-    <object-name>ajouts</object-name>
-    <object-name>bolG</object-name>
-    <object-name>bolD</object-name>
-    <object-name>portecrew</object-name>
-    <object-name>portepassager</object-name>
-    <object-name>portebagages</object-name>
-    <object-name>moteurs</object-name>
-    <object-name>gons</object-name>
-    <object-name>supports</object-name>
-  </effect>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitres</object-name>
-    <object-name>vitrecrew</object-name>
-    <object-name>vitrepassager</object-name>
-    <object-name>vitrecargoA</object-name>
-    <object-name>vitrecargoB</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>vitrecrew</object-name>
-    <object-name>vitrepassager</object-name>
-    <object-name>vitrecargoA</object-name>
-    <object-name>vitrecargoB</object-name>
-    <object-name>propblurG</object-name>
-    <object-name>propdiscG</object-name>
-    <object-name>propblurD</object-name>
-    <object-name>propdiscD</object-name>
-  </animation>
 
   <!-- working for Rembrandt -->
   <effect>
+    <inherits-from>Aircraft/DO-228/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitres</object-name>
+    <object-name>vitrecrew</object-name>
+    <object-name>vitrepassager</object-name>
+    <object-name>vitrecargoA</object-name>
+    <object-name>vitrecargoB</object-name>
+  </effect>
+  
+  <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
     <object-name>vitres</object-name>
     <object-name>vitrecrew</object-name>
     <object-name>vitrepassager</object-name>
@@ -238,7 +186,7 @@
     <object-name>propblurD</object-name>
     <object-name>propdiscD</object-name>
   </effect>
-
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/DO-228/Models/shadow.xml</path>
@@ -251,16 +199,14 @@
 
   <!-- Interieur -->
   <model>
-    <name>Interieur</name>
     <path>Aircraft/DO-228/Models/Interior/interior.xml</path>
   </model>
 
-  <!-- For Rembrandt -->
-  <animation>
-    <type>noshadow</type>
-    <object-name>Interieur</object-name>
-  </animation>
-
+  <!-- Immatriculation -->
+  <model>
+    <path>Aircraft/DO-228/Models/Immat/immat.xml</path>
+  </model>
+  
   <!-- Particules OSG -->
   <!-- Cranking effects -->
   <model>
@@ -962,43 +908,24 @@
 
   <!-- Light cone left -->
   <model>
-    <name>Left-Taxi-Light</name>
     <path>Aircraft/DO-228/Models/light/light-cone.xml</path>
     <offsets>
-      <x-m>          -1.27790 </x-m>
-      <y-m>          -1.11709 </y-m>
-      <z-m>          -1.67338 </z-m>
-      <pitch-deg>    -7.500 </pitch-deg>
+      <x-m>       -1.27790 </x-m>
+      <y-m>       -1.11709 </y-m>
+      <z-m>       -1.67338 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
     </offsets>
   </model>
 
   <!-- Light cone right -->
   <model>
-    <name>Right-Taxi-Light</name>
     <path>Aircraft/DO-228/Models/light/light-cone.xml</path>
     <offsets>
-      <x-m>          -1.27790 </x-m>
-      <y-m>           1.11709 </y-m>
-      <z-m>          -1.67338 </z-m>
-      <pitch-deg>    -7.500 </pitch-deg>
+      <x-m>       -1.27790 </x-m>
+      <y-m>        1.11709 </y-m>
+      <z-m>       -1.67338 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
     </offsets>
   </model>
-
-  <animation>
-    <name>All-Taxi-Light</name>
-    <object-name>Left-Taxi-Light</object-name>
-    <object-name>Right-Taxi-Light</object-name>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>All-Taxi-Light</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/landing-light</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation>
 
 </PropertyList>

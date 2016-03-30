@@ -9,8 +9,11 @@
     <object-name>ImatFuselageL1</object-name>
     <object-name>ImatFuselageL2</object-name>
     <object-name>ImatFuselageL3</object-name>
+    <object-name>ImatFuselageL3P</object-name>
     <object-name>ImatFuselageL4</object-name>
+    <object-name>ImatFuselageL4P</object-name>
     <object-name>ImatFuselageL5</object-name>
+    <object-name>ImatFuselageL5P</object-name>
     <object-name>ImatFuselageL6</object-name>
     <object-name>ImatFuselageR1</object-name>
     <object-name>ImatFuselageR2</object-name>
@@ -31,8 +34,11 @@
     <object-name>ImatFuselageL1</object-name>
     <object-name>ImatFuselageL2</object-name>
     <object-name>ImatFuselageL3</object-name>
+    <object-name>ImatFuselageL3P</object-name>
     <object-name>ImatFuselageL4</object-name>
+    <object-name>ImatFuselageL4P</object-name>
     <object-name>ImatFuselageL5</object-name>
+    <object-name>ImatFuselageL5P</object-name>
     <object-name>ImatFuselageL6</object-name>
     <object-name>ImatFuselageR1</object-name>
     <object-name>ImatFuselageR2</object-name>
@@ -83,6 +89,7 @@
   <animation> 
     <type>textranslate</type> 
     <object-name>ImatFuselageL3</object-name> 
+    <object-name>ImatFuselageL3P</object-name> 
     <property>sim/multiplay/generic/int[2]</property>
     <factor> 0.0244140625 </factor>
     <axis> 
@@ -95,6 +102,7 @@
   <animation> 
     <type>textranslate</type> 
     <object-name>ImatFuselageL4</object-name> 
+    <object-name>ImatFuselageL4P</object-name> 
     <property>sim/multiplay/generic/int[3]</property>
     <factor> 0.0244140625 </factor>
     <axis> 
@@ -107,6 +115,7 @@
   <animation> 
     <type>textranslate</type> 
     <object-name>ImatFuselageL5</object-name> 
+    <object-name>ImatFuselageL5P</object-name> 
     <property>sim/multiplay/generic/int[4]</property>
     <factor> 0.0244140625 </factor>
     <axis> 
@@ -274,5 +283,21 @@
     </axis> 
   </animation>
 
+  <animation>
+    <type>rotate</type>
+    <object-name>ImatFuselageL3P</object-name> 
+    <object-name>ImatFuselageL4P</object-name> 
+    <object-name>ImatFuselageL5P</object-name> 
+    <property>sim/model/door-positions/soute/position-norm</property>
+    <factor> -110 </factor>
+    <axis>
+      <x1-m>  3.34168 </x1-m>
+      <y1-m> -0.67870 </y1-m>
+      <z1-m> -0.56414 </z1-m>
+      <x2-m>  3.65285 </x2-m>
+      <y2-m> -0.64487 </y2-m>
+      <z2-m> -0.56414 </z2-m>
+    </axis>
+  </animation>
+  
 </PropertyList>
-

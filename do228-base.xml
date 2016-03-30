@@ -2,13 +2,8 @@
 
 <PropertyList>
 
-  <sim include="Nasal/views.xml">
+  <sim include="Systems/views.xml">
 
-    <description>Dornier Do 228 (YASim)</description>
-    <author>BARANGER Emmanuel (3D/FDM)</author>
-    <aircraft-version>0.1</aircraft-version>
-    <status>Alpha</status>
-   
     <fuel-fraction>1.0</fuel-fraction>
   
     <startup>
@@ -48,66 +43,23 @@
         <float n="7" alias="/engines/engine[1]/rpm" />
         <float n="8" alias="/engines/engine[0]/cranking" />
         <float n="9" alias="/engines/engine[1]/cranking" />
-        <string n="0" type="string" />
-        <string n="9" type="string" />                                        <!-- string[9] reserved for bombable mode -->
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
       </generic>
     </multiplay>
 
-    <help>
-      <title>Dornier Do 228n</title>
-      <key>
-        <name>d</name>
-        <desc>Open/Close crew door</desc>
-      </key>
-      <key>
-        <name>D</name>
-        <desc>Open/Close passenger door</desc>
-      </key>
-      <key>
-        <name>E</name>
-        <desc>Open/Close cargo door</desc>
-      </key>
-      <key>
-        <name>e</name>
-        <desc>Open/Close bagages door</desc>
-      </key>
-      <key>
-        <name>Ctrl-e</name>
-        <desc>Open/Close bay door</desc>
-      </key>
-    </help>
+    <help include="Systems/help.xml"/>
 
     <menubar include="Dialogs/do228-menu.xml"/>
 
   </sim>
 
-  <input>
-    <keyboard include="Nasal/do228-keyboard.xml"/>
-  </input>
+  <input include="Systems/do228-keyboard.xml"/>
 
-  <controls>
-    <engines>
-      <engine n="0">
-        <magnetos>3</magnetos>
-      </engine>
-      <engine n="1">
-        <magnetos>3</magnetos>
-      </engine>
-    </engines>
-    <gear>
-      <brake-parking>1</brake-parking>
-      <tailwheel-lock type="bool">false</tailwheel-lock>
-    </gear>
-  </controls>
+  <controls include="Systems/controls.xml"/>
 
-  <engines>
-    <engine>
-      <rpm type="double">700</rpm>
-    </engine>
-    <engine>
-      <rpm type="double">700</rpm>
-    </engine>
-  </engines>
+  <engines include="Systems/engines.xml"/>
   
   <nasal>
     <doors>

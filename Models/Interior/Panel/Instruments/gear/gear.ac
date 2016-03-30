@@ -9,7 +9,7 @@ data 2
 af
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.00005 0.011455 0.041739
 0.00005 0.005078 0.041739
@@ -31,7 +31,7 @@ data 3
 bip
 texture "gear.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 81
 0.002879 0.000543 0.008094
 0.002879 -0.000543 0.007368
@@ -667,7 +667,7 @@ data 4
 fond
 texture "gear.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 218
 -0.000061 -0.037845 0.030082
 0.001015 -0.035435 0.030082
@@ -2459,7 +2459,7 @@ data 5
 frein
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.00005 -0.004504 0.024631
 0.00005 -0.004504 0.041739
@@ -2481,7 +2481,7 @@ data 5
 gearA
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 9
 0.00005 -0.0314 -0.00731
 0.00005 -0.030041 -0.008703
@@ -2533,7 +2533,7 @@ data 5
 gearD
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 9
 0.00005 -0.030041 -0.028582
 0.00005 -0.024774 -0.023446
@@ -2585,7 +2585,7 @@ data 5
 gearG
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 11
 0.00005 -0.0314 0.011849
 0.00005 -0.030041 0.013241
@@ -2644,7 +2644,7 @@ data 5
 lamp3
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.00005 -0.007653 0.024631
 0.00005 -0.01403 0.024631
@@ -2666,7 +2666,7 @@ data 5
 lamp4
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.00005 -0.023555 0.024631
 0.00005 -0.017179 0.024631
@@ -2688,7 +2688,7 @@ data 5
 lamp5
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.00005 -0.00912 0.000726
 0.00005 -0.00912 -0.015131
@@ -2710,7 +2710,7 @@ data 8
 lampflap
 texture "geartrans.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 49
 0.000631 0.019597 0.007605
 0.000631 0.018416 0.006815
@@ -3090,7 +3090,7 @@ data 7
 posflap
 texture "gear.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 29
 0.000845 0.020617 -0.016037
 0.001075 0.017506 -0.031612
