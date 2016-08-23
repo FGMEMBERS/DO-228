@@ -7,12 +7,33 @@
       <label>Dornier Do 228</label>
       <enabled type="bool">true</enabled>
       <item>
-        <label>Select Livery</label>
+        <label>Livery</label>
         <binding>
           <command>nasal</command>
           <script>aircraft.livery.dialog.toggle()</script>
         </binding>
       </item>
+	  
+	  
+
+
+	  
+	  
+  	  
+      <item>
+        <label>Options</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", 
+            "Aircraft/DO-228/Dialogs/lights-dlg.xml");
+            lights.open();
+          </script>
+        </binding>
+      </item>
+	  
+ <!-- 
+  
       <item>
         <label>Immatriculation</label>
         <binding>
@@ -20,6 +41,7 @@
           <script>do228.immat_dialog.toggle()</script>
         </binding>
       </item>
+-->
     </menu>
   </default>
 

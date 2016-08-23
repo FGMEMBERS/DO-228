@@ -15,13 +15,11 @@
     <object-name>Switch</object-name>
     <object-name>base</object-name>
     <object-name>info</object-name>
-    <condition>
-      <property>/controls/lighting/instrument-lights</property>
-    </condition>
     <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
     </emission>
   </animation>
 
@@ -46,7 +44,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Switch</object-name>
-    <property>/controls/lighting/instrument-lights</property>
+    <property>controls/lighting/instrument-lights</property>
     <factor> -40 </factor>
     <axis>
       <x>  0 </x>

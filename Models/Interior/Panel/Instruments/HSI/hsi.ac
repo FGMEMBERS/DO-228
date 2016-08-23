@@ -10,7 +10,7 @@ data 10
 ADF.needle
 texture "HSI.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 7
 0.002458 0.035695 -0.000485
 0.002458 0.034704 -0.00011
@@ -48,7 +48,7 @@ data 10
 CRSneedle2
 texture "HSI.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 4
 0.00302 0.016141 0.000589
 0.00302 -0.016055 0.000589
@@ -70,7 +70,7 @@ data 10
 CRSneedle3
 texture "HSI.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 29
 0.002194 0.000211 -0.000124
 0.002194 0.020185 -0.008398
@@ -227,7 +227,7 @@ data 3
 HSI
 texture "HSI.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 164
 0.00216 0.044916 -0.048095
 0.001867 0.045402 -0.050149
@@ -1402,7 +1402,7 @@ data 8
 HSI.face
 texture "HSI.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 9
 0.00177 0.04295 -0.026654
 0.00177 0.024312 -0.045289
@@ -1470,7 +1470,7 @@ data 12
 HSI.gsneedle
 texture "HSI.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 3
 0.002563 0.002078 -0.040921
 0.001908 -0.001637 -0.040921
@@ -1490,7 +1490,7 @@ data 8
 HSI.knob
 texture "HSI.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 45.000001
 numvert 17
 0.005148 -0.03446 0.031649
 0.005149 -0.040078 0.029321
@@ -1622,7 +1622,7 @@ data 7
 hdgring
 texture "HSI.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 32
 0.002294 0.016211 -0.01612
 0.002296 0.008874 -0.02102
@@ -1775,7 +1775,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 180.000005
+crease 30.000001
 numvert 9
 0.004354 -0.045205 -0.02438
 0.004354 -0.0452 0.0244

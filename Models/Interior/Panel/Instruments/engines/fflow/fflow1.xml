@@ -2,62 +2,73 @@
 
 <PropertyList>
 
-  <path>fflowgauge.ac</path>
+<path>fflowgauge.ac</path>
 
-  <animation>
-    <object-name>PPHBezel</object-name>
-    <object-name>PPHFace</object-name>
-    <object-name>PPH.needle</object-name>
+<animation>
+<object-name>PPHBezel</object-name>
+<object-name>PPHFace</object-name>
+<object-name>PPH.needle</object-name>
+</animation>
 
-    <object-name>vitre</object-name>
-  </animation>
+<!--Working For Rembrandt-->
 
-  <!-- working for Rembrandt -->
-  <effect>
-    <inherits-from>Aircraft/DO-228/Models/Effects/Glass/glass</inherits-from>
-    <object-name>vitre</object-name>
-  </effect>
-  
-  <animation>
-    <type>material</type>
-    <object-name>PPHBezel</object-name>
-    <condition>
-      <property>/controls/lighting/instrument-lights</property>
-    </condition>
-    <emission>
-      <red>   0.01 </red>
-      <green> 0.01 </green>
-      <blue>  0.01 </blue>
-    </emission>
-  </animation>
+<animation>
+<object-name>vitre</object-name>
+</animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>PPHFace</object-name>
-    <object-name>PPH.needle</object-name>
-    <condition>
-      <property>/controls/lighting/instrument-lights</property>
-    </condition>
-    <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-    </emission>
-  </animation>
+<animation>
+<type>noshadow</type>
+<object-name>vitre</object-name>
+</animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>PPH.needle</object-name>
-    <property>/engines/engine[0]/fuel-flow-gph</property>
-    <interpolation>
-      <entry><ind>   0 </ind><dep>   0 </dep></entry>
-      <entry><ind> 119 </ind><dep> 240 </dep></entry>
-    </interpolation>
-    <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
-    </axis>
-  </animation>
+<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+<object-name>vitre</object-name>
+</animation>
+<!--Working For Rembrandt-->
+
+<animation>
+<type>material</type>
+<object-name>PPHBezel</object-name>
+<condition>
+<property>/controls/lighting/instrument-lights</property>
+</condition>
+<emission>
+<red>   0.01 </red>
+<green> 0.01 </green>
+<blue>  0.01 </blue>
+</emission>
+</animation>
+
+<animation>
+<type>material</type>
+<object-name>PPHFace</object-name>
+<object-name>PPH.needle</object-name>
+<condition>
+<property>/controls/lighting/instrument-lights</property>
+</condition>
+<emission>
+<red>   0.50 </red>
+<green> 0.25 </green>
+<blue>  0.25 </blue>
+</emission>
+</animation>
+
+<animation>
+<type>rotate</type>
+<object-name>PPH.needle</object-name>
+<property>/engines/engine[0]/fuel-flow-gph</property>
+<interpolation>
+<entry><ind>   0 </ind><dep>   0 </dep></entry>
+<entry><ind> 119 </ind><dep> 240 </dep></entry>
+</interpolation>
+<axis>
+<x> -1 </x>
+<y>  0 </y>
+<z>  0 </z>
+</axis>
+</animation>
 
 </PropertyList>

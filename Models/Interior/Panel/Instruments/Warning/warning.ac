@@ -9,7 +9,7 @@ data 4
 base
 texture "warning.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 1036
 0.000417 0.023591 -0.093309
 0.000417 0.023591 -0.091828
@@ -8514,7 +8514,7 @@ data 2
 on
 texture "warning.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 490
 0.000126 -0.011789 0.056281
 0.000126 -0.009677 0.056744

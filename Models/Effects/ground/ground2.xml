@@ -13,7 +13,7 @@
         <property>/gear/gear[2]/wow</property>
         <greater-than>
           <property>/gear/gear[2]/rollspeed-ms</property>
-          <value>5</value>
+          <value>50</value>
         </greater-than>
       </and>
     </condition>
@@ -71,7 +71,7 @@
         </color>
         <size><value> 3 </value></size>
       </end>
-      <life-sec><value> 0.5 </value></life-sec>
+      <life-sec><value> 0.4 </value></life-sec>
       <mass-kg>  0.025 </mass-kg>
       <radius-m> 0.175 </radius-m>
     </particle>

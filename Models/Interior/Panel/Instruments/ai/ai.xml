@@ -21,16 +21,31 @@
     <object-name>Plane.110</object-name>
     <object-name>Plane.111</object-name>
     <object-name>Plane.109</object-name>
-
-    <object-name>vitre</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
-  <effect>
-    <inherits-from>Aircraft/DO-228/Models/Effects/Glass/glass</inherits-from>
-    <object-name>vitre</object-name>
-  </effect>
-  
+<!--Working For Rembrandt-->
+
+<animation>
+<object-name>vitre</object-name>
+</animation>
+
+<animation>
+<type>noshadow</type>
+<object-name>vitre</object-name>
+</animation>
+
+<animation>
+<type>shader</type>
+<shader>chrome</shader>
+<texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+<object-name>vitre</object-name>
+</animation>
+<!--Working For Rembrandt-->
+
+
+
+ 
+
   <animation>
     <type>material</type>
     <object-name>AI.face</object-name>
@@ -47,9 +62,10 @@
       <property>/controls/lighting/instrument-lights</property>
     </condition>
     <emission>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+	
     </emission>
   </animation>
 
