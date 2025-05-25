@@ -5,7 +5,7 @@
   <chase-distance-m type="double" archive="y"> -20 </chase-distance-m>
 
   <view n="100">
-    <name>Co pilote</name>
+    <name>Co pilot</name>
     <type>lookfrom</type>
     <internal archive="y">true</internal>
     <config>
@@ -38,7 +38,7 @@
   </view>
 
   <view n="0">
-    <name>pilote</name>
+    <name>pilot</name>
     <internal archive="y">true</internal>
     <config>
       <x-offset-m archive="y"> -0.36073 </x-offset-m> <!-- Right -->
