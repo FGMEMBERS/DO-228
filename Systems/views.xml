@@ -38,6 +38,7 @@
   </view>
 
   <view n="0">
+    <name>pilote</name>
     <internal archive="y">true</internal>
     <config>
       <x-offset-m archive="y"> -0.36073 </x-offset-m> <!-- Right -->
