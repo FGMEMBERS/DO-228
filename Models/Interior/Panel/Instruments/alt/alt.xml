@@ -27,12 +27,35 @@
     <object-name>vitre</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>fond</object-name>
+    <object-name>lampe</object-name>
+    <object-name>face</object-name>
+    <object-name>knob</object-name>
+    <object-name>inhg01</object-name>
+    <object-name>inhg02</object-name>
+    <object-name>inhg03</object-name>
+    <object-name>inhg04</object-name>
+    <object-name>kpa01</object-name>
+    <object-name>kpa02</object-name>
+    <object-name>kpa03</object-name>
+    <object-name>kpa04</object-name>
+    <object-name>needle</object-name>
+    <object-name>neg</object-name>
+    <object-name>Alt10000</object-name>
+    <object-name>Alt1000</object-name>
+    <object-name>Alt100</object-name>
+    <object-name>Alt10</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
   <effect>
-    <inherits-from>Aircraft/DO-228/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>../../../../Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-  
+
   <animation>
     <type>material</type>
     <object-name>lampe</object-name>
@@ -53,14 +76,15 @@
     <object-name>Alt100</object-name>
     <object-name>Alt10</object-name>
     <condition>
-      <property>/controls/lighting/instrument-lights</property>
+      <property>controls/electric/battery-switch</property>
     </condition>
     <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
       <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
     </emission>
-  </animation>    
+  </animation>
 
   <animation>
     <type>select</type>

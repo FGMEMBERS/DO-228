@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<PropertyList include="do228-base.xml">
+<PropertyList   include="Systems/do228-base.xml">
 
   <sim>
-    
+
     <description>Dornier Do 228 (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM)</author>
-    
+
+    <aircraft-version>0.5</aircraft-version>
+    <status>Alpha</status>
+    <minimum-fg-version>2018.2.0</minimum-fg-version>
+
     <flight-model>yasim</flight-model>
-    <aero>do228-yasim</aero>
-    
+    <aero>Systems/do228-yasim</aero>
+
     <rating>
-      <FDM type="int">     3 </FDM>
-      <systems type="int"> 1 </systems>
-      <cockpit type="int"> 2 </cockpit>
-      <model type="int">   4 </model>
+      <FDM      type="int"> 3 </FDM>
+      <systems  type="int"> 2 </systems>
+      <cockpit  type="int"> 2 </cockpit>
+      <model    type="int"> 4 </model>
     </rating>
+
+    <previews>
+      <preview>
+        <type>interior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/do228-0.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/do228-1.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/do228-2.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/do228-3.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/do228-4.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/do228-5.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>Previews/do228-6.png</path>
+      </preview>
+    </previews>
 
     <tags>
       <tag>1980s</tag>
@@ -31,6 +73,8 @@
       <tag>stol</tag>
       <tag>twin-engine</tag>
       <tag>variable-pitch</tag>
+      <tag>compositor</tag>
+      <tag>HDR</tag>
     </tags>
 
   </sim>

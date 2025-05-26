@@ -2,27 +2,39 @@
 
 <PropertyList>
 
-  <title>Dornier Do 228n</title>
+  <title>Dornier Do 228</title>
   <line>______________________________________________</line>
+  <key>
+    <name>}</name>
+    <desc>AutoStart/AutoStop</desc>
+  </key>
   <key>
     <name>d</name>
     <desc>Open/Close crew door</desc>
   </key>
   <key>
-    <name>D</name>
+    <name>shift+d (D)</name>
     <desc>Open/Close passenger door</desc>
-  </key>
-  <key>
-    <name>E</name>
-    <desc>Open/Close cargo door</desc>
   </key>
   <key>
     <name>e</name>
     <desc>Open/Close bagages door</desc>
   </key>
   <key>
+    <name>shift+e (E)</name>
+    <desc>Open/Close cargo door</desc>
+  </key>
+  <key>
     <name>Ctrl-e</name>
     <desc>Open/Close bay door</desc>
   </key>
-  
+  <key>
+    <name>l</name>
+    <desc>Landing lights on/off</desc>
+  </key>
+  <key>
+    <name>shift+q (Q)</name>
+    <desc>Reset view</desc>
+  </key>
+
 </PropertyList>

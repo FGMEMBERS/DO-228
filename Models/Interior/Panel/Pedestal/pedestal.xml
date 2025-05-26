@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>pedestal.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>pedestal</object-name>
+    <object-name>throttleL</object-name>
+    <object-name>throttleR</object-name>
+    <object-name>mixtureL</object-name>
+    <object-name>mixtureR</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+
+  <!--  Throttle -->
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>throttleL</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/throttle</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>throttleL</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> -0.1220 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>throttleR</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/throttle</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>throttleR</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor> -0.1220 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <!--  Mixture -->
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>mixtureL</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/mixture</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>mixtureL</object-name>
+    <property>controls/engines/engine[0]/mixture</property>
+    <factor> -0.1260 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>mixtureR</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/mixture</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>mixtureR</object-name>
+    <property>controls/engines/engine[1]/mixture</property>
+    <factor> -0.1260 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

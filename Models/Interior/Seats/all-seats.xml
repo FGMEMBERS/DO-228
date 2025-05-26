@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Pilot seat -->
+  <model>
+    <path>pilotseat.xml</path>
+    <offsets>
+      <x-m> -4.630 </x-m>
+      <y-m> -0.370 </y-m>
+      <z-m> -0.800 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilot seat -->
+  <model>
+    <path>pilotseat.xml</path>
+    <offsets>
+      <x-m> -4.630 </x-m>
+      <y-m>  0.370 </y-m>
+      <z-m> -0.800 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Left -->
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -2.84726 </x-m>
+      <y-m>  0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -1.51726 </x-m>
+      <y-m>  0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -0.18895 </x-m>
+      <y-m>  0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m>  1.14274 </x-m>
+      <y-m>  0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m>  2.47105 </x-m>
+      <y-m>  0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -2.84726 </x-m>
+      <y-m> -0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -1.51726 </x-m>
+      <y-m> -0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -0.18895 </x-m>
+      <y-m> -0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m>  1.14274 </x-m>
+      <y-m> -0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m>  2.47105 </x-m>
+      <y-m> -0.42850 </y-m>
+      <z-m> -1.04761 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

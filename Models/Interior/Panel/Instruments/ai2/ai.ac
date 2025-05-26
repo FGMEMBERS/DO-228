@@ -10,7 +10,7 @@ data 8
 aircraft
 texture "ai2.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 116
 0.001687 -0.002263 -0.000361
 0.001687 -0.006562 -0.000361
@@ -740,7 +740,7 @@ data 10
 background
 texture "ai2.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 33
 0.000328 0.016345 -0.016102
 0.000328 0.012895 -0.018933
@@ -976,7 +976,7 @@ data 6
 bouton
 texture "ai2.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 129
 0.001732 -0.017684 -0.003456
 0.001732 -0.018322 -0.00398
@@ -1980,7 +1980,7 @@ data 4
 face
 texture "ai2.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 125
 0.002329 0.023219 0.004572
 0.002329 0.023669 0.000002
@@ -2718,7 +2718,7 @@ data 5
 float
 texture "ai2.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 68
 0.0002 0.013382 -0.010167
 0.0002 -0.013056 -0.005889
@@ -3147,7 +3147,7 @@ data 4
 fond
 texture "ai2.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 198
 0.001938 -0.000075 -0
 0.002636 0.024011 -0.023942
@@ -4531,7 +4531,7 @@ data 5
 scale
 texture "ai2.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 128
 0.001511 0.018619 -0.018375
 0.001511 0.014681 -0.021607
@@ -5116,7 +5116,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 180.000005
+crease 30.000005
 numvert 42
 0.002746 0.03341 0.006684
 0.002746 0 -0

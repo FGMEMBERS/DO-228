@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- <path>/sim/model/show-yoke</path> -->
+  <path>/sim/multiplay/generic/bool[1]</path>
+  <!--<path>/sim/model/show-immat</path> -->
+  <path>/sim/multiplay/generic/bool[0]</path>
+
+</PropertyList>

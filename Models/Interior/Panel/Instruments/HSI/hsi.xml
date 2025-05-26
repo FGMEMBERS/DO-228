@@ -7,23 +7,36 @@
   <animation>
     <object-name>HSI</object-name>
     <object-name>HSI.knob</object-name>
-    
+
     <object-name>HSI.face</object-name>
     <object-name>hdgring</object-name>
     <object-name>CRSneedle2</object-name>
     <object-name>CRSneedle3</object-name>
     <object-name>ADF.needle</object-name>
     <object-name>HSI.gsneedle</object-name>
-    
+
     <object-name>vitre</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>HSI</object-name>
+    <object-name>HSI.knob</object-name>
+    <object-name>HSI.face</object-name>
+    <object-name>hdgring</object-name>
+    <object-name>CRSneedle2</object-name>
+    <object-name>CRSneedle3</object-name>
+    <object-name>ADF.needle</object-name>
+    <object-name>HSI.gsneedle</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
   <effect>
-    <inherits-from>Aircraft/DO-228/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>../../../../Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-  
+
   <animation>
     <type>material</type>
     <object-name>HSI.face</object-name>
@@ -33,14 +46,15 @@
     <object-name>ADF.needle</object-name>
     <object-name>HSI.gsneedle</object-name>
     <condition>
-      <property>/controls/lighting/instrument-lights</property>
+      <property>controls/electric/battery-switch</property>
     </condition>
     <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
       <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
     </emission>
-  </animation>    
+  </animation>
 
   <animation>
     <type>rotate</type>
