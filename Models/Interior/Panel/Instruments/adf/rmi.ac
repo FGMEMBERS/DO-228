@@ -10,7 +10,7 @@ data 7
 boutons
 texture "rmi.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 16
 0.007171 -0.038545 0.031081
 0.007171 -0.042654 0.035189
@@ -107,7 +107,7 @@ data 7
 compass
 texture "rmi.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 9
 0.002096 0.032595 -0.032595
 0.002096 0 -0.046098
@@ -175,7 +175,7 @@ data 4
 face
 texture "rmi.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 54
 0.004558 0.036277 0.000185
 0.004558 0.03988 -0.001859
@@ -539,7 +539,7 @@ data 4
 fond
 texture "rmi.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 48
 0.005699 0.025123 -0.037535
 0.005699 0.008848 -0.044293
@@ -870,7 +870,7 @@ data 10
 needle.adf
 texture "rmi.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 49
 0.004556 0.024816 0.00289
 0.004556 0.024816 -0.002762
@@ -1191,7 +1191,7 @@ data 10
 needle.vor
 texture "rmi.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 40
 0.003226 -0.031242 -0.000568
 0.003226 -0.031242 0.000696
@@ -1429,7 +1429,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 180.000005
+crease 30.000005
 numvert 33
 0.005466 -0.000001 -0
 0.005466 0.038287 -0.025582

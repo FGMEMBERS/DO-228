@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-  
+
   <sim>
-    
+
     <model>
       <livery>
-        <name type="string">Default</name>
-        <texture>texture.png</texture>
+        <name     type="string">Default</name>
+        <texture  type="string">texture.png</texture>
         <specular>
-          <red>   0.3 </red>
-          <green> 0.3 </green>
-          <blue>  0.3 </blue>
+          <red    type="float"> 0.03 </red>
+          <green  type="float"> 0.03 </green>
+          <blue   type="float"> 0.03 </blue>
         </specular>
       </livery>
+      <show-immat type="bool">true</show-immat>
     </model>
-    
+    <multiplay>
+      <generic>
+        <bool     n="0" type="bool">true</bool>
+      </generic>
+    </multiplay>
+
   </sim>
-  
+
 </PropertyList>

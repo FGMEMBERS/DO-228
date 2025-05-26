@@ -10,7 +10,7 @@ data 10
 RPM.needle
 texture "rpm.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 10
 0.001891 0.013958 -0.001026
 0.001891 0.005974 -0.001067
@@ -79,7 +79,7 @@ data 8
 RPMBezel
 texture "rpm.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 72
 0 0.023405 -0.019639
 0 0.015277 -0.026459
@@ -540,7 +540,7 @@ data 7
 RPMFace
 texture "rpm.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 9
 0.001373 0.020832 -0.020832
 0.001373 0 -0.029461
@@ -606,7 +606,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 180.000005
+crease 30.000005
 numvert 19
 0.003551 0.020845 -0.01749
 0.003551 0.013606 -0.023564
