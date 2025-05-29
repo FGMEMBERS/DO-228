@@ -4,6 +4,7 @@
             Updated  : March 2016 BARANGER Emmanuel
             Updated  : April 2020 BARANGER Emmanuel
             Updated  : march 2025 BARANGER Emmanuel
+            Updated  : May  2025 BRENDT Peter (JWOCKY), to gether back into specs
 
      sources         : http://en.wikipedia.org/wiki/Dornier_Do_228
 
@@ -17,10 +18,16 @@
      Maximum speed      : 433 km/h (   234 kt    ) at 3050 m ( 10000 ft) (max cruise)
      Cruise speed       : 315 km/h (   170 kt    ) at  610 m (  2000 ft) (long-range cruise)
      Service ceiling    : 8535 m   ( 28000 ft    )
--->
-<airplane mass="8243" version="YASIM_VERSION_CURRENT" mtow-lbs="14495">
+     According to General Atomics, the manufacturer of the Do-228 since Dornier got obamaed and RUAG bidened:
+     additional source: Indian air force/navy manual for the Hindustan 228 NG/NXT
 
-  <approach speed="74" aoa="6" fuel="0.3">
+	Range: 1360nm with 500 Kg load (also the militari in the Netherlands and Germany, MFG3 claim the same numbers, 1372nm for NXT at high speed cruise.
+	Dutch coast guard claims 10 hours patrol endurance, the Germans, MFG3 , naval squadron 3, patrolling out of Nordholz for pollution, plan with p to 12 					
+	hours if the weather forecasts are okay.
+-->
+<airplane mass="8243" version="YASIM_VERSION_CURRENT" mtow-lbs="14110"> <!-- for the NXTand Hindustan  manufacturer year 2025, 14550 optional -->
+
+  <approach speed="74" aoa="6" fuel="0.3"> <!-- with flaps down, tanks pretty empty, more comman up yo 90 -->
     <control-setting axis="/controls/engines/engine[0]/throttle"        value="0.2"/>
     <control-setting axis="/controls/engines/engine[1]/throttle"        value="0.2"/>
 
@@ -194,13 +201,13 @@
              max-rpm="1800"> 
              <actionpt x="3.06092" y="2.52204" z="-0.01975"/>
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="2950" 
+             <turbine-engine eng-power="740" 
                              eng-rpm="2700" 
                              alt="12000" 
-                             flat-rating="2950" 
+                             flat-rating="740" 
                              min-n2="70" 
                              max-n2="100"
-                             bsfc="0.25"> 
+                             bsfc="0.15"> 
                              <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
@@ -214,20 +221,20 @@
              radius="1.3625" 
              cruise-speed="223" 
              cruise-rpm="2750" 
-             cruise-power="2750" 
+             cruise-power="715" 
              cruise-alt="12000" 
              min-rpm="220" 
              max-rpm="2700"> 
                <actionpt x="3.06092" y="2.52204" z="-0.01975"/>
            <actionpt x="3.06092" y="-2.52204" z="-0.01975"/>
              <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="2850" 
+             <turbine-engine eng-power="740" 
                              eng-rpm="2750" 
                              alt="12000" 
-                             flat-rating="2950" 
+                             flat-rating="740" 
                              min-n2="70" 
                              max-n2="100"
-                             bsfc="0.25"> 
+                             bsfc="0.15">
                              <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
