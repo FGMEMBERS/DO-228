@@ -5,6 +5,22 @@
   <sim               include="views.xml">
 
     <fuel-fraction>1</fuel-fraction>
+   <!-- basic startup settings for sim -->
+      <freeze>
+         <fuel>false</fuel>	<!-- false is default, only here for quick change while testing -->
+     </freeze>
+
+    <gui>
+         <dialogs>
+	     <autopilot>
+	        <!-- speed in kts for SYS7/8//11/13 APs -->
+		     <kts-select type="bool">true</kts-select>
+		     <mach-select tpye="bool">false</mach-select>
+	     </autopilot>
+         </dialogs>
+    </gui>
+
+		<chase-distance-m>-100</chase-distance-m>
 
     <startup>
       <splash-texture>Aircraft/DO-228/do228-splash.png</splash-texture>
