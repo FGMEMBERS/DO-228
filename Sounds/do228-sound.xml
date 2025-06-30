@@ -1,125 +1,97 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-  
+
   <fx>
-    
+
     <!-- Engine 1 -->
     <crank>
-      <name>engstart</name>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
-      <property>/engines/engine[0]/cranking</property>
-      <volume>
-        <offset>-0.4</offset>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </crank>
-    
-    <crank>
-      <name>crank</name>
-      <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
+      <name>engstart1</name>
+      <path>starter.wav</path>
       <condition>
-        <property>/engines/engine[0]/cranking</property>
-        <not>
-          <property>/engines/engine[0]/running</property>
-        </not>
+        <property>/controls/engines/engine[0]/starter</property>
       </condition>
       <volume>
-        <offset>-0.5</offset>
+        <property>orientation/alpha-deg</property>
+        <type>log</type>
+        <min>0.5</min>
+        <max>2.0</max>
       </volume>
-      <pitch>
-        <property>/engines/engine[0]/cranking</property>
-        <factor>1.0</factor>
-      </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-    
-    <crank>
-      <name>cough</name>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
-      <property>/engines/engine[0]/running</property>
-      <volume>
-        <offset>-0.50</offset>
-      </volume>
-      <pitch>
-        <property>/engines/engine[0]/running</property>
-        <factor>1.0</factor>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </crank>
-    
+
     <engine>
-      <name>engine</name>
+      <name>engine1</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/running.wav</path>
+      <path>running.wav</path>
       <condition>
-        <property>/engines/engine[0]/running</property>
+        <property>engines/engine[0]/running</property>
+        <not><property>controls/engines/engine[0]/cutoff</property></not>
+      </condition>
+      <volume>
+        <property>engines/engine[0]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>engines/engine[0]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <engine>
+      <name>enginerun1</name>
+      <mode>looped</mode>
+      <path>running.wav</path>
+      <condition>
+        <property>engines/engine[0]/running</property>
+        <not><property>controls/engines/engine[0]/cutoff</property></not>
+        <greater-than>
+          <property>engines/engine[0]/rpm</property>
+          <value>150</value>
+        </greater-than>
         <less-than>
-          <property>/engines/engine[0]/rpm</property>
-          <value>5000</value>
+          <property>engines/engine[0]/rpm</property>
+          <value>3000</value>
         </less-than>
       </condition>
       <volume>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00033</factor>
-        <min>0.2</min>
-        <max>1.0</max>
-        <offset>0.0</offset>
+        <property>orientation/alpha-deg</property>
+        <type>log</type>
+        <min>1.0</min>
+        <max>1.5</max>
       </volume>
-      <pitch>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00033</factor>
-        <min>0.0</min>
-        <max>1.0</max>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine>
-    
-    <engine>
-      <name>enginerun</name>
-      <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/running.wav</path>
-      <condition>
-        <property>/engines/engine[0]/running</property>
-        <greater-than>
-          <property>/engines/engine[0]/rpm</property>
-          <value>400</value>
-        </greater-than>
-      </condition>
       <volume>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00033</factor>
-        <min>0.0</min>
-        <max>1.00</max>
-        <offset>0.0</offset>
+        <property>sim/current-view/internal</property>
+        <offset>1.0</offset>
+        <factor>-0.4</factor>
       </volume>
       <pitch>
-        <property>/engines/engine[0]/rpm</property>
-        <factor>0.00033</factor>
-        <min>0.0</min>
-        <max>1.0</max>
+        <property>engines/engine[0]/rpm</property>
+        <factor>0.0009496</factor>
+        <min>0.6</min>
+        <max>2.0</max>
+        <offset>0</offset>
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-    
+
     <propeller>
-      <name>propeller-external</name>
+      <name>propeller1-external</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/propeller.wav</path>
+      <path>propeller.wav</path>
       <condition>
-        <and>
-          <not><property>sim/current-view/internal</property></not>
-          <greater-than>
-            <property>engines/engine[0]/rpm</property>
-            <value>100</value>
-          </greater-than>
-        </and>
+        <property>engines/engine[0]/running</property>
+        <not><property>sim/current-view/internal</property></not>
+        <not><property>controls/engines/engine[0]/cutoff</property></not>
+        <greater-than>
+          <property>engines/engine[0]/rpm</property>
+          <value>100</value>
+        </greater-than>
       </condition>
       <volume>
         <property>/orientation/alpha-deg</property>
@@ -140,123 +112,95 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </propeller>
-    
+
     <!-- Engine 2 -->
     <crank>
-      <name>engstart</name>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
-      <property>/engines/engine[1]/cranking</property>
-      <volume>
-        <offset>-0.4</offset>
-      </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </crank>
-    
-    <crank>
-      <name>crank</name>
-      <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
+      <name>engstart2</name>
+      <path>starter.wav</path>
       <condition>
-        <property>/engines/engine[1]/cranking</property>
-        <not>
-          <property>/engines/engine[1]/running</property>
-        </not>
+        <property>/controls/engines/engine[1]/starter</property>
       </condition>
       <volume>
-        <offset>-0.5</offset>
+        <property>orientation/alpha-deg</property>
+        <type>log</type>
+        <min>0.5</min>
+        <max>2.0</max>
       </volume>
-      <pitch>
-        <property>/engines/engine[1]/cranking</property>
-        <factor>1.0</factor>
-      </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-    
-    <crank>
-      <name>cough</name>
-      <path>Aircraft/DO-228/Sounds/starter.wav</path>
-      <property>/engines/engine[1]/running</property>
-      <volume>
-        <offset>-0.50</offset>
-      </volume>
-      <pitch>
-        <property>/engines/engine[1]/running</property>
-        <factor>1.0</factor>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </crank>
-    
+
     <engine>
-      <name>engine</name>
+      <name>engine2</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/running.wav</path>
+      <path>running.wav</path>
       <condition>
-        <property>/engines/engine[1]/running</property>
+        <property>engines/engine[1]/running</property>
+        <not><property>controls/engines/engine[0]/cutoff</property></not>
+      </condition>
+      <volume>
+        <property>engines/engine[1]/n2</property>
+        <factor type="double">0.0025</factor>
+      </volume>
+      <pitch>
+        <property>engines/engine[1]/n2</property>
+        <factor>0.02</factor>
+        <offset>-0.1</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <engine>
+      <name>enginerun2</name>
+      <mode>looped</mode>
+      <path>running.wav</path>
+      <condition>
+        <property>engines/engine[1]/running</property>
+        <not><property>controls/engines/engine[0]/cutoff</property></not>
+        <greater-than>
+          <property>engines/engine[1]/rpm</property>
+          <value>150</value>
+        </greater-than>
         <less-than>
-          <property>/engines/engine[1]/rpm</property>
-          <value>5000</value>
+          <property>engines/engine[1]/rpm</property>
+          <value>3000</value>
         </less-than>
       </condition>
       <volume>
-        <property>/engines/engine[1]/rpm</property>
-        <factor>0.00033</factor>
-        <min>0.2</min>
-        <max>1.0</max>
-        <offset>0.0</offset>
+        <property>orientation/alpha-deg</property>
+        <type>log</type>
+        <min>1.0</min>
+        <max>1.5</max>
       </volume>
-      <pitch>
-        <property>/engines/engine[1]/rpm</property>
-        <factor>0.00033</factor>
-        <min>0.0</min>
-        <max>1.0</max>
-      </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-    </engine>
-    
-    <engine>
-      <name>enginerun</name>
-      <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/running.wav</path>
-      <condition>
-        <property>/engines/engine[1]/running</property>
-        <greater-than>
-          <property>/engines/engine[1]/rpm</property>
-          <value>400</value>
-        </greater-than>
-      </condition>
       <volume>
-        <property>/engines/engine[1]/rpm</property>
-        <factor>0.00033</factor>
-        <min>0.0</min>
-        <max>1.00</max>
-        <offset>0.0</offset>
+        <property>sim/current-view/internal</property>
+        <offset>1.0</offset>
+        <factor>-0.4</factor>
       </volume>
       <pitch>
-        <property>/engines/engine[1]/rpm</property>
-        <factor>0.00033</factor>
-        <min>0.0</min>
-        <max>1.0</max>
+        <property>engines/engine[1]/rpm</property>
+        <factor>0.0009496</factor>
+        <min>0.6</min>
+        <max>2.0</max>
+        <offset>0</offset>
       </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-    
+
     <propeller>
-      <name>propeller-external</name>
+      <name>propeller2-external</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/propeller.wav</path>
+      <path>propeller.wav</path>
       <condition>
-        <and>
-          <not><property>sim/current-view/internal</property></not>
-          <greater-than>
-            <property>engines/engine[1]/rpm</property>
-            <value>100</value>
-          </greater-than>
-        </and>
+        <property>engines/engine[1]/running</property>
+        <not><property>sim/current-view/internal</property></not>
+        <not><property>controls/engines/engine[0]/cutoff</property></not>
+        <greater-than>
+          <property>engines/engine[1]/rpm</property>
+          <value>100</value>
+        </greater-than>
       </condition>
       <volume>
         <property>/orientation/alpha-deg</property>
@@ -277,7 +221,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </propeller>
-    
+
     <!-- *************************** -->
     <rumble>
       <name>rumble</name>
@@ -298,16 +242,16 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </rumble>
-    
+
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
-      <path>Aircraft/DO-228/Sounds/gear-up.wav</path>
+      <path>gear-up.wav</path>
       <property>/gear/gear[0]/position-norm</property>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-    
+
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -320,7 +264,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-    
+
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -355,11 +299,11 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
-    
+
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
-      <path>Aircraft/DO-228/Sounds/flaps.wav</path>
+      <path>flaps.wav</path>
       <property>/surface-positions/flap-pos-norm</property>
       <volume>
         <factor>0.2</factor>
@@ -367,11 +311,11 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </flap>
-    
+
     <wind>
       <name>wind</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/wind.wav</path>
+      <path>wind.wav</path>
       <property>/velocities/airspeed-kt</property>
       <volume>
         <property>/velocities/airspeed-kt</property>
@@ -388,7 +332,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </wind>
-    
+
     <stall>
       <name>stall</name>
       <mode>looped</mode>
@@ -401,43 +345,182 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </stall>
-    
+
+    <!-- DOOR -->
     <door>
-      <name>Crew door</name>
-      <path>Sounds/door_close.wav</path>
+      <name>Open crew door</name>
+      <path>DoorOpen.wav</path>
       <condition>
-        <equals>
-          <property>/instrumentation/doors/crew/position-norm</property>
-          <value>0.0</value>
-        </equals>
+        <greater-than>
+          <!-- <property>sim/model/door-positions/crew/position-norm</property> -->
+          <property>sim/multiplay/generic/float[0]</property>
+          <value>0.1</value>
+        </greater-than>
       </condition>
       <volume>
-        <factor>0.4</factor>
+        <factor>0.8</factor>
       </volume>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </door>
-    
+
     <door>
-      <name>Passenger door</name>
-      <path>Sounds/door_close.wav</path>
+      <name>Close crew door</name>
+      <path>DoorClosed.wav</path>
       <condition>
         <equals>
-          <property>/instrumentation/doors/passenger/position-norm</property>
-          <value>0.0</value>
+          <!-- <property>sim/model/door-positions/crew/position-norm</property> -->
+          <property>sim/multiplay/generic/float[0]</property>
+          <value>0</value>
         </equals>
       </condition>
       <volume>
-        <factor>0.4</factor>
+        <factor>1</factor>
       </volume>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </door>
-    
+
+    <door>
+      <name>Open passenger door</name>
+      <path>DoorOpen.wav</path>
+      <condition>
+        <greater-than>
+          <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+          <property>sim/multiplay/generic/float[1]</property>
+          <value>0.1</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <door>
+      <name>Close passenger door</name>
+      <path>DoorClosed.wav</path>
+      <condition>
+        <equals>
+          <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+          <property>sim/multiplay/generic/float[1]</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <door>
+      <name>Open cargo door</name>
+      <path>DoorOpen.wav</path>
+      <condition>
+        <greater-than>
+          <!-- <property>sim/model/door-positions/cargo/position-norm</property> -->
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>0.1</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <door>
+      <name>Close cargo door</name>
+      <path>DoorClosed.wav</path>
+      <condition>
+        <equals>
+          <!-- <property>sim/model/door-positions/cargo/position-norm</property> -->
+          <property>sim/multiplay/generic/float[11]</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <door>
+      <name>Open soute door</name>
+      <path>DoorOpen.wav</path>
+      <condition>
+        <greater-than>
+          <!-- <property>sim/model/door-positions/soute/position-norm</property> -->
+          <property>sim/multiplay/generic/float[16]</property>
+          <value>0.1</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <door>
+      <name>Close soute door</name>
+      <path>DoorClosed.wav</path>
+      <condition>
+        <equals>
+          <!-- <property>sim/model/door-positions/soute/position-norm</property> -->
+          <property>sim/multiplay/generic/float[16]</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <door>
+      <name>Open bagage door</name>
+      <path>DoorOpen.wav</path>
+      <condition>
+        <greater-than>
+          <!-- <property>sim/model/door-positions/bagages/position-norm</property> -->
+          <property>sim/multiplay/generic/float[17]</property>
+          <value>0.1</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <door>
+      <name>Close bagage door</name>
+      <path>DoorClosed.wav</path>
+      <condition>
+        <equals>
+          <!-- <property>sim/model/door-positions/bagages/position-norm</property> -->
+          <property>sim/multiplay/generic/float[17]</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
     <rain>
       <name>rain</name>
       <mode>looped</mode>
-      <path>Aircraft/DO-228/Sounds/rain_canopy.wav</path>
+      <path>rain_canopy.wav</path>
       <condition>
         <greater-than>
           <property>/environment/rain-norm</property>
@@ -457,7 +540,7 @@
         <offset>1.0</offset>
       </pitch>
     </rain>
-    
+
   </fx>
-  
+
 </PropertyList>

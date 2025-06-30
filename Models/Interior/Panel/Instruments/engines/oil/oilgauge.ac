@@ -10,7 +10,7 @@ data 11
 Oil.needle1
 texture "oilp.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 10
 0.001711 -0.012071 -0.007154
 0.001711 -0.00884 -0.004484
@@ -79,7 +79,7 @@ data 11
 Oil.needle2
 texture "oilp.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 10
 0.001711 -0.008292 0.01132
 0.001711 -0.005322 0.008363
@@ -148,7 +148,7 @@ data 8
 OilBezel
 texture "oilp.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 72
 0 0.023405 -0.019639
 0 0.015277 -0.026459
@@ -609,7 +609,7 @@ data 7
 OilFace
 texture "oilp.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000005
 numvert 9
 0.001373 0.020832 -0.020832
 0.001373 0 -0.029461
@@ -675,7 +675,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 180.000005
+crease 30.000005
 numvert 19
 0.003551 0.020845 -0.01749
 0.003551 0.013606 -0.023564

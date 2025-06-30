@@ -14,6 +14,16 @@
   </animation>
 
   <animation>
+    <type>noshadow</type>
+    <object-name>GearCtl.base</object-name>
+    <object-name>GearCtl.lever</object-name>
+    <object-name>GearCtl.Llamp</object-name>
+    <object-name>GearCtl.Nlamp</object-name>
+    <object-name>GearCtl.Rlamp</object-name>
+    <object-name>GearCtl.slot</object-name>
+  </animation>
+
+  <animation>
     <type>material</type>
     <object-name>GearCtl.Llamp</object-name>
     <object-name>GearCtl.Nlamp</object-name>
@@ -22,8 +32,8 @@
       <red>   0.5 </red>
       <green> 2.0 </green>
       <blue>  0.5 </blue>
-    </emission> 
-  </animation>    
+    </emission>
+  </animation>
 
   <animation>
     <type>rotate</type>

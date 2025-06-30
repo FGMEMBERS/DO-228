@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Livery for New Central Airservice (NCA), by Hans Kunkell, 2020. -->
+<PropertyList>
+
+  <sim>
+
+    <model>
+      <livery>
+        <name     type="string">NCA</name>
+        <texture  type="string">Liveries/2048x2048/NCA.png</texture>
+        <specular>
+          <red    type="float"> 0.03 </red>
+          <green  type="float"> 0.03 </green>
+          <blue   type="float"> 0.03 </blue>
+        </specular>
+      </livery>
+      <show-immat type="bool">false</show-immat>
+    </model>
+    <multiplay>
+      <generic>
+        <bool     n="0" type="bool">false</bool>
+      </generic>
+    </multiplay>
+
+  </sim>
+
+</PropertyList>

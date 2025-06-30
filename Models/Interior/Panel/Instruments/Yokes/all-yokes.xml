@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Pilot yoke -->
+  <model>
+    <path>yoke.xml</path>
+    <offsets>
+      <x-m> -5.19511 </x-m>
+      <y-m> -0.37124 </y-m>
+      <z-m> -1.22544 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilot yoke -->
+  <model>
+    <path>yoke.xml</path>
+    <offsets>
+      <x-m> -5.19511 </x-m>
+      <y-m>  0.37124 </y-m>
+      <z-m> -1.22544 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

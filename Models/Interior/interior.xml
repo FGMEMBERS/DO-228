@@ -16,18 +16,24 @@
     <object-name>intportecargoB</object-name>
     <object-name>intportesoute</object-name>
     <object-name>intportebagages</object-name>
-    
+
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
     <object-name>intvitrecrew</object-name>
     <object-name>intvitrepassager</object-name>
     <object-name>intvitrecargoA</object-name>
     <object-name>intvitrecargoB</object-name>
+    <!-- HDR mode -->
+    <object-name>HDRintvitres</object-name>
+    <object-name>HDRintvitrecrew</object-name>
+    <object-name>HDRintvitrepassager</object-name>
+    <object-name>HDRintvitrecargoA</object-name>
+    <object-name>HDRintvitrecargoB</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <!-- working for compositor -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
+    <inherits-from>../Effects/Glass/glassrain</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitrecrew</object-name>
     <object-name>intvitrepassager</object-name>
@@ -35,50 +41,56 @@
     <object-name>intvitrecargoB</object-name>
   </effect>
 
+  <effect>
+    <inherits-from>../Effects/Glass/glass</inherits-from>
+    <object-name>HDRintvitres</object-name>
+    <object-name>HDRintvitrecrew</object-name>
+    <object-name>HDRintvitrepassager</object-name>
+    <object-name>HDRintvitrecargoA</object-name>
+    <object-name>HDRintvitrecargoB</object-name>
+  </effect>
+
+  <!-- Sélection des vitres en fonction de HDR ou pas -->
   <animation>
     <type>select</type>
+    <condition>
+      <!-- <property>sim/rendering/hdr/hdr-enabled</property> -->
+      <property>sim/multiplay/generic/bool[2]</property>
+    </condition>
+    <object-name>HDRintvitres</object-name>
+    <object-name>HDRintvitrecrew</object-name>
+    <object-name>HDRintvitrepassager</object-name>
+    <object-name>HDRintvitrecargoA</object-name>
+    <object-name>HDRintvitrecargoB</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <!-- <not><property>sim/rendering/hdr/hdr-enabled</property></not> -->
+      <not><property>sim/multiplay/generic/bool[2]</property></not>
+    </condition>
     <object-name>intvitres</object-name>
     <object-name>intvitrecrew</object-name>
     <object-name>intvitrepassager</object-name>
     <object-name>intvitrecargoA</object-name>
     <object-name>intvitrecargoB</object-name>
-    <condition>
-      <less-than>
-        <property>/environment/rain-norm</property>
-        <value>0.1</value>
-      </less-than>
-    </condition>
   </animation>
-  
-  <!-- Raind Drops Effect -->
+
   <model>
-    <path>Aircraft/DO-228/Models/Effects/RainDrops/rainglass.xml</path>
-    <condition>
-      <greater-than>
-        <property>/environment/rain-norm</property>
-        <value>0.1</value>
-      </greater-than>
-    </condition>
-  </model>
-  
-  <!-- Pilote -->
-  <model>
-    <path>Aircraft/DO-228/Models/Pilot/pilot.xml</path>
-    <offsets>
-      <x-m> -4.990 </x-m>
-      <y-m> -0.360 </y-m>
-      <z-m> -0.850 </z-m>
-    </offsets>
+    <path>Panel/all-panels.xml</path>
   </model>
 
-  <!-- Planche de bord -->
   <model>
-    <path>Aircraft/DO-228/Models/Interior/Panel/panel.xml</path>
-    <offsets>
-      <x-m> -5.43219 </x-m>
-      <y-m>  0.00000 </y-m>
-      <z-m> -0.73647 </z-m>
-    </offsets>
+    <path>../Pilot/all-pilots.xml</path>
+  </model>
+
+  <model>
+    <path>Panel/Instruments/Yokes/all-yokes.xml</path>
+  </model>
+
+  <model>
+    <path>Seats/all-seats.xml</path>
   </model>
 
   <!-- Doors animation -->
@@ -91,17 +103,29 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
+        <condition>
+          <and>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
         <command>nasal</command>
         <script>doors.crew.toggle();</script>
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>intportecrew</object-name>
     <object-name>intvitrecrew</object-name>
-    <property>sim/model/door-positions/crew/position-norm</property>
+    <!-- <property>sim/model/door-positions/crew/position-norm</property> -->
+    <property>sim/multiplay/generic/float[0]</property>
     <factor> -80 </factor>
     <center>
       <x-m> -5.34966 </x-m>
@@ -124,17 +148,29 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
+        <condition>
+          <and>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
         <command>nasal</command>
         <script>doors.passenger.toggle();</script>
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>intportepassager</object-name>
     <object-name>intvitrepassager</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
+    <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+    <property>sim/multiplay/generic/float[1]</property>
     <factor> 80 </factor>
     <center>
       <x-m> -5.34966 </x-m>
@@ -157,17 +193,29 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
+        <condition>
+          <and>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
         <command>nasal</command>
         <script>doors.cargo.toggle();</script>
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>intportecargoA</object-name>
     <object-name>intvitrecargoA</object-name>
-    <property>sim/model/door-positions/cargo/position-norm</property>
+    <!-- <property>sim/model/door-positions/cargo/position-norm</property> -->
+    <property>sim/multiplay/generic/float[11]</property>
     <factor> -120 </factor>
     <center>
       <x-m>  1.23025 </x-m>
@@ -190,17 +238,29 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
+        <condition>
+          <and>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
         <command>nasal</command>
         <script>doors.cargo.toggle();</script>
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>intportecargoB</object-name>
     <object-name>intvitrecargoB</object-name>
-    <property>sim/model/door-positions/cargo/position-norm</property>
+    <!-- <property>sim/model/door-positions/cargo/position-norm</property> -->
+    <property>sim/multiplay/generic/float[11]</property>
     <factor> 120 </factor>
     <center>
       <x-m>  2.50334 </x-m>
@@ -222,16 +282,28 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
+        <condition>
+          <and>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
         <command>nasal</command>
         <script>doors.soute.toggle();</script>
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>intportesoute</object-name>
-    <property>sim/model/door-positions/soute/position-norm</property>
+    <!-- <property>sim/model/door-positions/soute/position-norm</property> -->
+    <property>sim/multiplay/generic/float[16]</property>
     <factor> -110 </factor>
     <axis>
       <x1-m>  3.34168 </x1-m>
@@ -242,7 +314,7 @@
       <z2-m> -0.56414 </z2-m>
     </axis>
   </animation>
-  
+
   <animation>
     <type>pick</type>
     <object-name>intportebagages</object-name>
@@ -251,16 +323,28 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
+        <condition>
+          <and>
+            <property>gear/gear[0]/wow</property>
+            <property>gear/gear[1]/wow</property>
+            <property>gear/gear[2]/wow</property>
+            <less-than>
+              <property>gear/gear[0]/rollspeed-ms</property>
+              <value>10</value>
+            </less-than>
+          </and>
+        </condition>
         <command>nasal</command>
         <script>doors.bagages.toggle();</script>
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>intportebagages</object-name>
-    <property>sim/model/door-positions/bagages/position-norm</property>
+    <!-- <property>sim/model/door-positions/bagages/position-norm</property> -->
+    <property>sim/multiplay/generic/float[17]</property>
     <factor> -110 </factor>
     <axis>
       <x1-m> -7.01373 </x1-m>
@@ -271,5 +355,5 @@
       <z2-m> -0.91691 </z2-m>
     </axis>
   </animation>
-  
+
 </PropertyList>

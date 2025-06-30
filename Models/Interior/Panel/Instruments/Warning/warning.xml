@@ -10,15 +10,23 @@
   </animation>
 
   <animation>
+    <type>noshadow</type>
+    <object-name>base</object-name>
+    <object-name>on</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
+  <animation>
     <type>material</type>
     <object-name>on</object-name>
     <condition>
-      <property>/controls/lighting/instrument-lights</property>
+      <property>controls/electric/battery-switch</property>
     </condition>
     <emission>
+      <factor-prop>controls/lighting/luminosite-lights</factor-prop>
       <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
     </emission>
   </animation>
 
