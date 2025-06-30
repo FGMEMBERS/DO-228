@@ -40,7 +40,7 @@
     <control-setting axis="/controls/gear/gear-down"                    value="1"/>
   </approach>
 
-  <cruise speed="223" alt="12000">
+  <cruise speed="423" alt="12000">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.825"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.825"/>
     
@@ -193,18 +193,18 @@
              mass="336" 
              moment="250" 
              radius="1.3625" 
-             cruise-speed="223" 
+             cruise-speed="423" 
              cruise-rpm="2200" 
              cruise-power="2750" 
              cruise-alt="12000" 
              min-rpm="220" 
-             max-rpm="1800"> 
+             max-rpm="2800"> 
              <actionpt x="3.06092" y="2.52204" z="-0.01975"/>
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="740" 
+             <turbine-engine eng-power="2740" 
                              eng-rpm="2700" 
                              alt="12000" 
-                             flat-rating="740" 
+                             flat-rating="2940" 
                              min-n2="70" 
                              max-n2="100"
                              bsfc="0.15"> 
@@ -219,19 +219,18 @@
              mass="336" 
              moment="-250" 
              radius="1.3625" 
-             cruise-speed="223" 
-             cruise-rpm="2750" 
-             cruise-power="715" 
+             cruise-speed="423" 
+             cruise-rpm="2800" 
+             cruise-power="2750" 
              cruise-alt="12000" 
              min-rpm="220" 
-             max-rpm="2700"> 
-               <actionpt x="3.06092" y="2.52204" z="-0.01975"/>
+             max-rpm="2800"> 
            <actionpt x="3.06092" y="-2.52204" z="-0.01975"/>
              <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="740" 
+             <turbine-engine eng-power="2740" 
                              eng-rpm="2750" 
                              alt="12000" 
-                             flat-rating="740" 
+                             flat-rating="1940" 
                              min-n2="70" 
                              max-n2="100"
                              bsfc="0.15">
@@ -248,7 +247,10 @@
         retract-time="7" 
         on-water="0" 
         on-solid="1"
-        spring="1" 
+        stictino="1"
+        sfric="1.2"
+        dfric="0.9"
+        spring="4" 
         damp="2">
         <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.8" dst1="0.8"/>
         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -262,6 +264,11 @@
   <gear x="0.59273" y="1.67379" z="-2.42968"
         compression="0.2"
         spring="4"
+        on-water="0" 
+        on-solid="1"
+        stictino="1"
+        sfric="1.2"
+        dfric="0.9"
         damp="2"
         stiction="1">
         <control-input  control="BRAKE"  axis="/controls/gear/brake-parking"/>
@@ -277,7 +284,12 @@
   <gear x="0.59273" y="-1.67379" z="-2.42968"
         compression="0.2"
         spring="4"
-        damp="2"
+        on-water="0" 
+        on-solid="1"
+        stictino="1"
+        sfric="1.2"
+        dfric="0.9"
+          damp="2"
         stiction="1">
         <control-input  control="BRAKE"  axis="/controls/gear/brake-parking"/>
         <control-input  control="BRAKE"  axis="/controls/gear/brake-right"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<PropertyList include="Systems/do228-base.xml>
-  <sim include="views.xml">
+<PropertyList include="Systems/do228-base.xml">
+  <sim include="Systems/views.xml">
     <description>Dornier Do 228 (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM)</author>
     <author>BRENDT Peter (Dragon coffee)</author>
@@ -10,8 +10,8 @@
     <status>Alpha</status>
     <minimum-fg-version>2018.2.0</minimum-fg-version>
 
-    <flight-model>yasim</flight-model>
-    <aero>Systems/do228-yasim</aero>
+    <aircraft-version>V03.00.00</aircraft-version>
+    <minimum-fg-version>2018.2.1</minimum-fg-version>
 
     <rating>
       <FDM      type="int"> 3 </FDM>
@@ -19,8 +19,15 @@
       <cockpit  type="int"> 2 </cockpit>
       <model    type="int"> 4 </model>
     </rating>
-		<fuel-fraction>1</fuel-fraction>
+
+    <flight-model>yasim</flight-model>
+    <aero>Systems/do228-yasim</aero>
+    <fuel-fraction>1</fuel-fraction>
+
 		<!-- basic startup settings for sim -->
+		<voodoomaster>
+		</voodoomaster>
+			
 		<freeze>
  		  <fuel>false</fuel>
 		  <!-- false is default, only here for quick change while testing -->
@@ -48,9 +55,7 @@
 		</sound>
 
 		<model>
-			<path>
-				Aircraft/DO-228/Models/do228.xm
-			</path>
+			  <path>Aircraft/DO-228/Models/do228.xml</path>
  			<livery>
 				<file        type="string"/>
 				<specular>
@@ -63,9 +68,9 @@
       			<show-yoke     type="bool"/>
 		</model>
 
-		<systems         include="rules.xml"/>
+		<systems         include="Systems/rules.xml"/>
 
-		<instrumentation include="initialisation.xml"/>
+		<instrumentation include="Systems/initialisation.xml"/>
 
 		<multiplay>
 			<chat_display>
@@ -132,21 +137,21 @@
 			</generic>
 		</multiplay>
 
-		<help include="help.xml"/>
+		<help include="Systems/help.xml"/>
 
- 		<flaps include="flaps.xml"/>
+ 		<flaps include="Systems/flaps.xml"/>
 
-		<menubar include="../Dialogs/do228-menu.xml"/>
+		<menubar include="Dialogs/do228-menu.xml"/>
 
-		<aircraft-data include="aircraft-data.xml"/>
+		<aircraft-data include="Systems/aircraft-data.xml"/>
 
-		<input include="do228-keyboard.xml"/>
+		<input include="Dialogs/do228-keyboard.xml"/>
 		
-		<controls include="controls.xml"/>
+		<controls include="Systems/controls.xml"/>
 
-		<consumables include="consumables.xml"/>
+		<consumables include="Systems/consumables.xml"/>
 
-		<engines include="engines.xml"/>
+		<engines include="Systems/engines.xml"/>
 
  		<instrumentation include="Systems/instrumentation.xml">
  			<gsdi>
@@ -154,6 +159,7 @@
  				<enabled       type="bool">true</enabled>
 			</gsdi>
 		</instrumentation>
+		
 
 		<nasal>
 			<doors>		
@@ -229,151 +235,6 @@
       <tag>HDR</tag>
     </tags>
 		
-		<hud>
-			<enable3d>false</enable3d>
-			<path n="1">Aircraft/do228/Systems/HUD/hud.xml</path>
-			<visibility n="1">false</visibility>
-			<palette>
-				<color n="0">
-					<alpha type="float">0.85</alpha>
-					<antialiased type="bool">true</antialiased>
-					<brightness type="float">0.85</brightness>
-					<transparent type="bool">true</transparent>
-					<red type="float">0.38</red>
-					<green type="float">1.0</green>
-					<blue type="float">0.22</blue>
-				</color>
-	
-				<color n="1">
-					<alpha type="float">0.85</alpha>
-					<antialiased type="bool">true</antialiased>
-					<brightness type="float">0.85</brightness>
-					<transparent type="bool">true</transparent>
-					<red type="float">1.0</red>
-					<green type="float">1.0</green>
-					<blue type="float">1.0</blue>
-				</color>
-	
-				<color n="2">
-					<alpha type="float">1.00</alpha>
-					<antialiased type="bool">false</antialiased>
-					<brightness type="float">1.00</brightness>
-					<transparent type="bool">false</transparent>
-					<red type="float">0.1</red>
-					<green type="float">0.1</green>
-					<blue type="float">0.1</blue>
-				</color>
-	
-				<color n="3">
-					<alpha type="float">0.85</alpha>
-					<antialiased type="bool">true</antialiased>
-					<brightness type="float">0.85</brightness>
-					<transparent type="bool">true</transparent>
-					<red type="float">1.0</red>
-					<green type="float">0.2</green>
-					<blue type="float">0.0</blue>
-				</color>
-	
-				<color n="4">
-					<alpha type="float">1.00</alpha>
-					<antialiased type="bool">false</antialiased>
-					<brightness type="float">1.00</brightness>
-					<transparent type="bool">false</transparent>
-					<red type="float">1.0</red>
-					<green type="float">0.0</green>
-					<blue type="float">0.0</blue>
-				</color>
-	
-				<color n="5">
-					<alpha type="float">1.00</alpha>
-					<antialiased type="bool">false</antialiased>
-					<brightness type="float">1.00</brightness>
-					<transparent type="bool">false</transparent>
-					<red type="float">0.0</red>
-					<green type="float">1.0</green>
-					<blue type="float">0.0</blue>
-				</color>
-	
-				<color n="6">
-					<alpha type="float">1.00</alpha>
-					<antialiased type="bool">false</antialiased>
-					<brightness type="float">1.00</brightness>
-					<transparent type="bool">false</transparent>
-					<red type="float">0.1</red>
-					<green type="float">0.1</green>
-					<blue type="float">1.0</blue>
-				</color>
-	
-				<color n="7">
-					<alpha type="float">1.00</alpha>
-					<antialiased type="bool">false</antialiased>
-					<brightness type="float">1.00</brightness>
-					<transparent type="bool">false</transparent>
-					<red type="float">0.0</red>
-					<green type="float">0.2</green>
-					<blue type="float">0.0</blue>
-				</color>
-	
-				<color n="8">
-					<alpha type="float">1.00</alpha>
-					<antialiased type="bool">false</antialiased>
-					<brightness type="float">1.00</brightness>
-					<transparent type="bool">false</transparent>
-					<red type="float">0.0</red>
-					<green type="float">0.0</green>
-					<blue type="float">0.2</blue>
-				</color>
-	
-				<color n="9">
-					<alpha type="float">1.00</alpha>
-					<antialiased type="bool">false</antialiased>
-					<brightness type="float">1.00</brightness>
-					<transparent type="bool">false</transparent>
-					<red type="float">0.2</red>
-					<green type="float">0.0</green>
-					<blue type="float">0.0</blue>
-				</color>
-	
-				<color n="10">
-					<alpha type="float">1.00</alpha>
-					<antialiased type="bool">false</antialiased>
-					<brightness type="float">1.00</brightness>
-					<transparent type="bool">false</transparent>
-					<red type="float">1.0</red>
-					<green type="float">1.0</green>
-					<blue type="float">0.0</blue>
-				</color>
-
-			</palette>
- 
-			<clipping>
-				<left type="double">-300</left>
-				<top type="double">250</top>
-				<right type="double">300</right>
-				<bottom type="double">-275</bottom>
-			</clipping>
-		</hud>
-		  
-		<rendering>
-			<redout>
-				<enabled type="bool">true</enabled>
-				<parameters>
-					<blackout-complete-g type="double">9.1</blackout-complete-g>
-					<blackout-onset-g type="double">7.5</blackout-onset-g>
-					<redout-complete-g type="double">-6.5</redout-complete-g>
-					<redout-onset-g type="double">-4</redout-onset-g>
-				</parameters>
-			</redout>
-			<camera-group>
-				<znear type="double">0.1</znear>
-			</camera-group>
-		</rendering>
-
-
-		<hud>
-			<mode type="int">0</mode>
-		</hud>
-
 
   </sim>
 
