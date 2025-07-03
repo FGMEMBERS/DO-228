@@ -201,13 +201,13 @@
              max-rpm="2800"> 
              <actionpt x="3.06092" y="2.52204" z="-0.01975"/>
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="2740" 
+             <turbine-engine eng-power="1940" 
                              eng-rpm="2700" 
                              alt="12000" 
-                             flat-rating="2940" 
+                             flat-rating="1940" 
                              min-n2="70" 
                              max-n2="100"
-                             bsfc="0.15"> 
+                             bsfc="0.56"> 
                              <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
@@ -227,13 +227,13 @@
              max-rpm="2800"> 
            <actionpt x="3.06092" y="-2.52204" z="-0.01975"/>
              <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-             <turbine-engine eng-power="2740" 
-                             eng-rpm="2750" 
+             <turbine-engine eng-power="1940" 
+                             eng-rpm="2700" 
                              alt="12000" 
                              flat-rating="1940" 
                              min-n2="70" 
                              max-n2="100"
-                             bsfc="0.15">
+                             bsfc="0.45">
                              <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
                              <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
                              <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
